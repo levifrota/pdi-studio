@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import User from './models';
+import User from '@/models';
 
 export default {
   data() {
@@ -20,6 +20,7 @@ export default {
   },
   mounted() {
     User.find().then(response => {
+      console.log(response);
       this.usuarios = response.data;
     });
   }
